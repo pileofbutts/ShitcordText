@@ -36,19 +36,15 @@ public class ShitcordText {
     private static final char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     public static void main(String... args) {
-
-        Options options = new Options();
-        options.addOption("t", true, "Text to format");
-
         try {
-            CommandLineParser parser = new GnuParser();
-            CommandLine commandLine = parser.parse(options, args);
+            Options options = new Options();
+            options.addOption("t", true, "Text to format");
 
+            CommandLine commandLine = new GnuParser().parse(options, args);
             String text = commandLine.getOptionValue("t").toLowerCase();
             StringBuilder output = new StringBuilder();
-            char[] letters = text.toCharArray();
 
-            for (char letter : letters) {
+            for (char letter : text.toCharArray()) {
                 if (letter == ' ') {
                     output.append(" ");
                     continue;
