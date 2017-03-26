@@ -50,7 +50,9 @@ public class ShitcordText {
                     continue;
                 }
 
-                if (!String.valueOf(ALPHABET).contains(String.valueOf(letter))) {
+                if (!String.valueOf(ShitcordText.ALPHABET)
+                        .contains(String.valueOf(letter)))
+                {
                     System.out.println("Shitcord doesn't support the letter \"" + letter + "\" :(");
                     return;
                 }
