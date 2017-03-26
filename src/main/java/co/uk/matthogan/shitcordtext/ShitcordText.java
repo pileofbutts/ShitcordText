@@ -33,7 +33,7 @@ import java.util.Locale;
 public class ShitcordText {
 
     private static final String BLUE = ":regional_indicator_%s:";
-    private static final char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+    private static final char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     public static void main(String... args) {
         try {
@@ -50,7 +50,7 @@ public class ShitcordText {
                     continue;
                 }
 
-                if (!String.valueOf(alphabet).contains(String.valueOf(letter))) {
+                if (!String.valueOf(ALPHABET).contains(String.valueOf(letter))) {
                     System.out.println("Shitcord doesn't support the letter \"" + letter + "\" :(");
                     return;
                 }
